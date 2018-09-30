@@ -1,6 +1,9 @@
 # muggle-assert
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/KayleePop/muggle-assert.svg)](https://greenkeeper.io/) [![Travis badge](https://travis-ci.org/KayleePop/muggle-assert.svg?branch=master)](https://travis-ci.org/#) [![standard badge](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![npm](https://img.shields.io/npm/v/muggle-assert.svg)](https://www.npmjs.com/package/muggle-assert)
+[![Greenkeeper badge](https://badges.greenkeeper.io/KayleePop/muggle-assert.svg)](https://greenkeeper.io/)
+[![Travis badge](https://travis-ci.org/KayleePop/muggle-assert.svg?branch=master)](https://travis-ci.org/KayleePop/muggle-assert)
+[![standard badge](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![npm](https://img.shields.io/npm/v/muggle-assert.svg)](https://www.npmjs.com/package/muggle-assert)
 
 A simplification of node's assert for use with [muggle](https://github.com/kayleepop/muggle)
 
