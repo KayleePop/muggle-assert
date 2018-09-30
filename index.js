@@ -67,6 +67,11 @@ function throws (func, expectedError, message = 'should throw error') {
 
     if (expectedError !== undefined) {
       passing = deepEqual(actualError, expectedError)
+
+      // remove the stacks from the output
+      // deepEqual doesn't compare them, so including them is confusing
+      delete actualError.stack
+      delete expectedError.stack
     }
   }
 
@@ -100,6 +105,11 @@ async function rejects (promise, expectedError, message = 'promise should reject
 
     if (expectedError !== undefined) {
       passing = deepEqual(actualError, expectedError)
+
+      // remove the stacks from the output
+      // deepEqual doesn't compare them, so including them is confusing
+      delete actualError.stack
+      delete expectedError.stack
     }
   }
 
