@@ -86,7 +86,7 @@ Assert that the two values are equivalent.
 
 [muggle-deep-equal](https://github.com/kayleepop/muggle-deep-equal) is used to determine equality. It uses `===` to compare values, and recursively compares the values of objects and arrays. Its behavior is detailed in [its readme](https://github.com/kayleepop/muggle-deep-equal#readme).
 
-The AssertionError provides `actual` and `expected` properties that usually give a good idea of why the assertion failed. It's still often a good idea to add a custom description using "should", especially  to differentiate multiple equal assertions within the same muggle test.
+The AssertionError provides `actual` and `expected` properties that usually give a good idea of why the assertion failed. It's still often a good idea to add a custom description using "should", especially  to differentiate multiple `assert.equal()` within the same muggle test.
 
 ```js
 assert.equal('penguin', 'penguin')
