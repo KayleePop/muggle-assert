@@ -36,7 +36,7 @@ await assert.rejects(Promise.reject(new Error('penguin')))
 
 #### AssertionError
 
-`assert.AssertionError(args)`
+`new assert.AssertionError(args)`
 
 When an assertion fails, it throws an AssertionError
 
