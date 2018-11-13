@@ -99,9 +99,9 @@ assert.equal([1, 2, 3], [1, 2, 3])
 assert.equal({key: 'value'}, {key: 'value'})
 
 try {
-  assert.equal(1, true, 'should use strict equality')
+  assert.equal(1, true, '1 should equal true')
 } catch (assertError) {
-  assert.equal(assertError.message, 'should use strict equality')
+  assert.equal(assertError.message, '1 should equal true')
   assert.equal(assertError.actual, 1)
   assert.equal(assertError.expected, true)
   assert.equal(assertError.operator, 'deepEqual')
