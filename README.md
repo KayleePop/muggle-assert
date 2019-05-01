@@ -57,6 +57,7 @@ function outerFunction () {
   assert.equal(assertError.operator, 'animal')
 
   // strips stackStartFn and above from the stack trace
+  // only works in v8 like node and chrome
   assert(!assertError.stack.includes('outerFunction'))
 }
 ```
