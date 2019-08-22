@@ -5,14 +5,14 @@ const assert = require('./index.js')
 test('AssertionError properties should be set correctly', () => {
   const error = new assert.AssertionError({
     message: 'penguins',
-    operator: `('v')`,
+    operator: '(\'v\')',
     expected: 'food',
     actual: 'snow'
   })
 
   assert.equal(error.name, 'AssertionError')
   assert.equal(error.message, 'penguins')
-  assert.equal(error.operator, `('v')`)
+  assert.equal(error.operator, '(\'v\')')
   assert.equal(error.expected, 'food')
   assert.equal(error.actual, 'snow')
 })
@@ -54,7 +54,7 @@ test('assert() should pass if truthy', () => {
   assert({}, '{}')
   assert([], '[]')
   assert(100, '100')
-  assert('string', `'string'`)
+  assert('string', '\'string\'')
   assert(new Date(), 'new Date()')
 })
 
@@ -72,7 +72,7 @@ test('assert() should throw if falsy', () => {
   assert.throws(() => assert(undefined), 'undefined')
   assert.throws(() => assert(0), '0')
   assert.throws(() => assert(NaN), 'NaN')
-  assert.throws(() => assert(''), `empty string`)
+  assert.throws(() => assert(''), 'empty string')
 })
 
 test('assert() should include custom message in AssertionError', () => {
@@ -151,14 +151,14 @@ test('.equal() should include custom message in AssertionError', () => {
 })
 
 test('.equal() should use strict equality', () => {
-  assert.throws(() => assert.equal(2, '2'), `2 and '2'`)
-  assert.throws(() => assert.equal('', false), `false and ''`)
-  assert.throws(() => assert.equal('', 0), `'' and 0`)
-  assert.throws(() => assert.equal(undefined, null), `undefined and null`)
-  assert.throws(() => assert.equal(0, false), `0 and false`)
-  assert.throws(() => assert.equal('0', false), `'0' and false`)
-  assert.throws(() => assert.equal(1, true), `1 and true`)
-  assert.throws(() => assert.equal('1', true), `'1' and true`)
+  assert.throws(() => assert.equal(2, '2'), '2 and \'2\'')
+  assert.throws(() => assert.equal('', false), 'false and \'\'')
+  assert.throws(() => assert.equal('', 0), '\'\' and 0')
+  assert.throws(() => assert.equal(undefined, null), 'undefined and null')
+  assert.throws(() => assert.equal(0, false), '0 and false')
+  assert.throws(() => assert.equal('0', false), '\'0\' and false')
+  assert.throws(() => assert.equal(1, true), '1 and true')
+  assert.throws(() => assert.equal('1', true), '\'1\' and true')
 })
 // end of assert.equal() tests
 
