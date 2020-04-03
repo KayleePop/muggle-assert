@@ -1,7 +1,6 @@
 # muggle-assert
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/KayleePop/muggle-assert.svg)](https://greenkeeper.io/)
-[![Travis badge](https://travis-ci.org/KayleePop/muggle-assert.svg?branch=master)](https://travis-ci.org/KayleePop/muggle-assert)
+[![Node.js CI](https://github.com/KayleePop/muggle-assert/workflows/Node.js%20CI/badge.svg)](https://github.com/KayleePop/muggle-assert/actions)
 [![standard badge](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![npm](https://img.shields.io/npm/v/muggle-assert.svg)](https://www.npmjs.com/package/muggle-assert)
 
