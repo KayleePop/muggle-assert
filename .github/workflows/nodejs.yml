@@ -1,0 +1,26 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [lts/*, node]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js version '${{ matrix.node-version }}'
+      uses: dcodeIO/setup-node-nvm@v3.0.0
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm test
+      env:
+        CI: true
