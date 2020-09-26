@@ -12,15 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [lts/*, node]
-
+        node: [ '12', '14' ]
+    name: Node ${{ matrix.node }} sample
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js version '${{ matrix.node-version }}'
-      uses: dcodeIO/setup-node-nvm@v3.0.0
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm test
-      env:
-        CI: true
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm test
+        env:
+          CI: true
